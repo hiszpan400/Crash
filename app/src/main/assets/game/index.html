@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Crash Offline</title>
+      <meta charset="UTF-8">
+      <meta name="description" content="Phaser game">
+      <meta name="keywords" content="HTML,JavaScript,Phaser,game">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+      <meta name="HandheldFriendly" content="true" />
+      <style>
+        html, body { margin: 0; padding: 0; overflow: hidden; background: #000; width: 100%; height: 100%; }
+        canvas { display: block; }
+      </style>
+      <link rel="stylesheet" href="custom-controls.css" />
+   </head>
+   <body>
+      <!-- Diagnostic overlay: must load first to catch errors from everything below -->
+      <script src="error-overlay.js"></script>
+
+      <!-- Phaser 3.15.1 (local copy, works offline) -->
+      <script src="assets/js/phaser-arcade-physics.min.js"></script>
+
+      <!-- Javascript files -->
+      <script type="text/javascript" src="assets/js/game.js"></script>
+
+      <!-- Custom touch control overlay: A/B buttons + drag zone for Left/Right -->
+      <script src="custom-controls.js"></script>
+   </body>
+</html>
