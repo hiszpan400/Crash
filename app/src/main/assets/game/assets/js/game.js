@@ -87,6 +87,9 @@ function create ()
         window.__diagLogError("[diag] wymiary tekstur: " + report.join(", "));
     }
 
+    // Test: zwykly obrazek BEZ fizyki - czy sie wyswietli?
+    this.add.image(150, 300, "box").setScale(3);
+
     platforms = this.physics.add.staticGroup();
     spades = this.physics.add.staticGroup();
     boxes = this.physics.add.staticGroup();
