@@ -78,6 +78,11 @@ function create ()
     checkpoint = this.physics.add.staticGroup();
 
     //  Here we create the ground.
+    var diagRect = this.add.graphics();
+    diagRect.fillStyle(0xff0000, 1);
+    diagRect.fillRect(50, 400, 100, 100);
+    diagRect.setDepth(1000);
+
     platforms.create(-60, 568, 'ground').setScale(2).refreshBody();
     platforms.create(987, 568, 'ground').setScale(2).refreshBody();
     platforms.create(460, 568, 'ground_little').setScale(2).refreshBody();
