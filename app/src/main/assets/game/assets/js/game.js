@@ -72,6 +72,21 @@ function preload ()
 //create function will create all elements we loaded on the preload function, display, and set property and collision to them.
 function create ()
 {
+    if (window.__diagLogError) {
+        var checkKeys = ["box", "ground", "crash", "enemy"];
+        var report = [];
+        for (var i = 0; i < checkKeys.length; i++) {
+            var k = checkKeys[i];
+            if (this.textures.exists(k)) {
+                var src = this.textures.get(k).source[0];
+                report.push(k + "=" + src.width + "x" + src.height);
+            } else {
+                report.push(k + "=BRAK_TEKSTURY");
+            }
+        }
+        window.__diagLogError("[diag] wymiary tekstur: " + report.join(", "));
+    }
+
     platforms = this.physics.add.staticGroup();
     spades = this.physics.add.staticGroup();
     boxes = this.physics.add.staticGroup();
