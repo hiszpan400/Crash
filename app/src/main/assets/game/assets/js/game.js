@@ -49,6 +49,12 @@ var apple;
 // Phaser will automatically look for this function when it starts and load anything defined within it.
 function preload ()
 {
+    this.load.on("loaderror", function (file) {
+        if (window.__diagLogError) {
+            window.__diagLogError("LOADERROR: " + file.key + " -> " + file.src);
+        }
+    });
+
     //note: if you wanna use hd texture pack just use the following example with "hd" and comment the old line.
     this.load.image('box', 'assets/img/hd/box.png');
     //this.load.image('box', 'assets/img/box.png');
