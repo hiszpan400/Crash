@@ -93,12 +93,12 @@ function create ()
 
     player = this.add.sprite(100, 450, 'crash');
     this.physics.add.existing(player, false);
-    player.setCollideWorldBounds(true);
+    player.body.setCollideWorldBounds(true);
     player.setScale(0.3);
     player.body.setSize(100, 140).setOffset(20, 8);
 
     enemy = makeDynamicImage(this, 600, 525, 'enemy');
-    enemy.setCollideWorldBounds(true);
+    enemy.body.setCollideWorldBounds(true);
 
     boxArr.push(makeStaticImage(this, 200, 525, 'box'));
     boxArr.push(makeStaticImage(this, 200, 502, 'box'));
