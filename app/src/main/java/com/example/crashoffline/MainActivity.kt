@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity() {
         settings.allowFileAccessFromFileURLs = true
         @Suppress("DEPRECATION")
         settings.allowUniversalAccessFromFileURLs = true
-        settings.cacheMode = WebSettings.LOAD_DEFAULT
+        settings.cacheMode = WebSettings.LOAD_NO_CACHE
+        webView.clearCache(true)
 
         webView.webViewClient = WebViewClient()
 
